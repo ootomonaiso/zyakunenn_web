@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/*　ヘッダー */
 header {
     background: #333;
     color: white;
@@ -20,18 +21,22 @@ header a {
     color: white;
     text-decoration: none;
 }
+/* グローバルナビゲーション */
 nav {
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 nav a {
     color: white;
     text-decoration: none;
+    text-align: center;
     padding: 10px;
 }
 nav a:hover {
     background: #555;
 }
+/* navで使うボタンの見た目 */
 .menu-btn {
     display: none;
     background: none;
@@ -40,20 +45,26 @@ nav a:hover {
     color: white;
     cursor: pointer;
 }
+/* メインビジュアル */
 .main-visual {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
-    height: 400px;
+    background-image: url(main_img.png);
+    background-repeat: no-repeat; /* 画像の繰り返し禁止だぞー */
+    background-size: cover;
+    background-position: center; 
+    width: 100vw; 
+    height: 400px; 
+    overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 24px;
 }
+
+/* メインコンテンツ */
 .content {
     max-width: 1000px; 
     margin: 20px auto;
     padding: 20px;
 }
+/* フッター */
 footer {
     background: #333;
     color: white;

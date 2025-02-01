@@ -14,7 +14,6 @@ th {
 }
 
 @media screen and (max-width: 430px) {
-    /* ブロックにする */
     table, thead, tbody, tr, th, td {
         display: block;
     }
@@ -23,16 +22,13 @@ th {
         display: none;
     }
 
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-
     td {
         padding: 8px;
-        margin-bottom: 5px;
+    }
+
+    /* ここテーブルに最初の色つけるやつ */
+    td:first-of-type{
+        background-color: #f5f5f5;
     }
 
     tr {

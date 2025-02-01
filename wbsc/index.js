@@ -1,4 +1,4 @@
 function toggleMenu() {
-    const nav = document.getElementById('nav');
-    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    const nav = document.querySelector('header nav'); // ヘッダー内のナビゲーション
+    nav.classList.toggle('open');
 }

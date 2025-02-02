@@ -67,6 +67,7 @@ header a {
     z-index: 1001;
 }
 
+
 .menu-btn span {
     position: absolute;
     width: 100%;
@@ -91,15 +92,18 @@ header a {
 
 /* メニューオープン時のアニメーション */
 .menu-btn.open span:nth-child(1) {
-    transform: translateY(12px) rotate(45deg);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); 
 }
 
 .menu-btn.open span:nth-child(2) {
     opacity: 0;
+    transform: translateY(-50%) scale(0);
 }
 
 .menu-btn.open span:nth-child(3) {
-    transform: translateY(-12px) rotate(-45deg);
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
 }
 
 /* メインビジュアル */
@@ -166,8 +170,6 @@ footer {
     background: #555;
 }
 
-/* スマホ向け調整 */
-/* スマホ向け調整 */
 @media (max-width: 430px) {
     .menu-btn {
         display: block;
@@ -207,6 +209,10 @@ footer {
 
     .global-nav .nav-icon {
         display: block;
+    }
+
+    .footer-nav {
+        display: none; /* スマートフォンでは非表示 */
     }
 }
 

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/*　ヘッダー */
+/* ヘッダー */
 header {
     background: #333;
     color: white;
@@ -22,19 +22,22 @@ header a {
     text-decoration: none;
 }
 /* グローバルナビゲーション */
-nav {
+.global-nav {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    height: 100%;
 }
-nav a {
+.global-nav a {
     color: white;
+    display: flex; /* テキストとアイコンを横並びに */
+    align-items: center; /* テキストを中央に */
     text-decoration: none;
     text-align: center;
     padding: 10px;
 }
-nav a:hover {
+.global-nav a:hover {
     background: #555;
+    color: yellow; /* マウスオーバーされたら色変え */
 }
 /* navで使うボタンの見た目 */
 .menu-btn {
@@ -48,21 +51,17 @@ nav a:hover {
 /* メインビジュアル */
 .main-visual {
     background-image: url(main_img.png);
-    background-repeat: no-repeat; /* 画像の繰り返し禁止だぞー */
+    background-repeat: no-repeat; /* 画像の繰り返し禁止 */
     background-size: cover;
-    background-position: center; 
-    width: 100vw; 
-    height: 400px; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+    background-position: center;
+    width: 100vw;
+    height: 400px;
 }
 
 /* メインコンテンツ */
 .content {
-    height: 1000px; 
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 1000px; /* 最大幅を指定 */
+    margin: 0 auto;
 }
 /* フッター */
 footer {
@@ -71,32 +70,39 @@ footer {
     text-align: center;
     padding: 10px;
 }
-
-footer nav {
-    display: flex;
+.footer-nav {
     justify-content: center;
+    display: flex; /* テキストとアイコンを横並びに */
+    align-items: center; /* テキストを中央に */
     gap: 20px;
 }
-footer nav a {
+.footer-nav a {
     color: white;
     text-decoration: none;
 }
+.footer-nav a:hover {
+    background: #555;
+}
 @media (max-width: 430px) {
-    header nav {
-        display: none; /* 初期状態で非表示 */
+    .global-nav {
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px; /* ヘッダーの高さ分下に表示 */
         left: 0;
         width: 100%;
         background: #333;
         text-align: center;
+        max-height: 0; /* 初期状態では高さを0にして非表示 */
+        overflow: hidden; /* 非表示時にコンテンツを隠す */
+        transition: max-height 0.3s ease-out;
     }
-
-    header nav a {
+    .global-nav a {
         display: block;
         padding: 15px;
         color: white;
+        display: flex; /* テキストとアイコンを横並びに */
+        align-items: center; /* テキストを中央に */
     }
 
     .menu-btn {
@@ -104,7 +110,7 @@ footer nav a {
     }
 
     /* メニューが開いた状態 */
-    header nav.open {
-        display: flex;
+    .global-nav.open {
+        max-height: 500px; 
     }
 }

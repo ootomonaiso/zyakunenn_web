@@ -1,7 +1,8 @@
-body {
+* {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
 }
 /* ヘッダー */
 header {
@@ -19,7 +20,7 @@ header h1 {
 
 header a {
     color: white;
-    text-decoration: none;
+    text-decoration: none;/* ヘッダーのタイトルのリンクの下線止め */
 }
 /* グローバルナビゲーション */
 .global-nav {
@@ -50,17 +51,55 @@ header a {
 }
 /* メインビジュアル */
 .main-visual {
-    background-image: url(main_img.png);
-    background-repeat: no-repeat; /* 画像の繰り返し禁止 */
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 400px;
+    width: 100%; /* 幅をブラウザの横幅いっぱいに設定 */
+    height: 400px; /* 高さを400pxに設定 */
+    background-size: cover; /* 背景画像を要素全体にフィット */
+    background-position: center; /* 背景画像の中央を表示 */
+    position: relative; /* 要素を相対配置 */
+    animation: changeBg 10s infinite; /* changeBgを10秒ごとに無限にやる */
 }
 
+@keyframes changeBg {
+    /* アニメーションの開始時と終了時 */
+    0%, 100% {
+        background-image: url('main1.png'); 
+    }
+    33% {
+        background-image: url('main_img.png'); 
+    }
+    66% {
+        background-image: url('test.png');
+    }
+}
+
+
+.main-visual p {
+    color: white; /* テキストの色 */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 80%;
+    margin: auto; /* 中央に配置 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 要素を中央に配置 */
+}
 /* メインコンテンツ */
 .content {
     max-width: 1000px; /* 最大幅を指定 */
+    margin: 0 auto; /* 中央寄せ */
+    align-items: center;
+    text-align: center;
+}
+.content h2{
     margin: 0 auto;
 }
 /* フッター */

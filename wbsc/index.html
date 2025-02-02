@@ -11,28 +11,38 @@
         <h1><a href="#">ウェブデザイン技能競技会公式サイト</a></h1>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <nav class="global-nav">
-            <a href="#">HOME</a>
-            <a href="#">競技概要</a>
-            <a href="#">参加申込</a>
-            <a href="#">FAQ</a>
+            <a href="#"><img src="home.png" alt="HOME" class="nav-icon">HOME</a>
+            <a href="#"><img src="about.png" alt="競技概要" class="nav-icon">競技概要</a>
+            <a href="#"><img src="entry.png" alt="参加申込" class="nav-icon">参加申込</a>
+            <a href="#"><img src="faq.png" alt="FAQ" class="nav-icon">FAQ</a>
         </nav>
     </header>
     <div class="main-visual">
-        <p class="main-text">ウェブデザイン技能競技会へようこそ</p>
+        <div class="main-text">
+
+            <p>デジタル時代をリードする<br>ウェブデザインの実力を競う</p>
+        </div>
     </div>
     <div class="content">
         <h2>ウェブデザイン技能競技会とは</h2>
-        <p>ウェブデザインのスキルを競い合う競技会です。</p>
+        <p>ウェブデザインのスキルを競い合う競技会です。<br>
+           実践的な課題に取り組み、技術力を競います。</p>
     </div>
     <footer>
-        <p>© ウェブデザイン技能競技会</p>
         <nav class="footer-nav">
             <a href="#">HOME</a>
             <a href="#">競技概要</a>
             <a href="#">参加申込</a>
             <a href="#">FAQ</a>
         </nav>
+        <p>© ウェブデザイン技能競技会</p>
     </footer>
-    <script src="index.css"></script>
+    <nav class="mobile-nav">
+        <a href="#"><img src="home.png" alt="HOME" class="nav-icon">HOME</a>
+        <a href="#"><img src="about.png" alt="競技概要" class="nav-icon">競技概要</a>
+        <a href="#"><img src="entry.png" alt="参加申込" class="nav-icon">参加申込</a>
+        <a href="#"><img src="faq.png" alt="FAQ" class="nav-icon">FAQ</a>
+    </nav>
+    <script src="index.js"></script>
 </body>
 </html>

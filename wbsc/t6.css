@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* ページ見出しの中央寄せ */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* フォーム全体のレイアウト：中央寄せし、最大幅を設定 */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 各ラベルはブロック要素として表示し、上部に余白を設定 */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* テキストボックス、電話番号、メールアドレス、日時、セレクトボックス、テキストエリアの基本設定 */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="datetime-local"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* テキストエリアの高さ設定 */
+textarea {
+  height: 100px;
+}
+
+/* スマートフォン用レスポンシブデザイン */
+/* 画面幅が430px以下の場合、余白やフォントサイズを調整する */
+@media screen and (max-width: 430px) {
+  body {
+    margin: 10px;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  label, input, select, textarea {
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+  }
+}
+
+/* 必須項目を示す※マークの色を赤に設定 */
+.required {
+  color: red;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}

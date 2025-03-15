@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- 文字コード、画面サイズの設定 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ページタイトル -->
   <title>スマートフォン用お問い合わせフォーム</title>
-  <!-- 外部CSSファイルの読み込み -->
   <link rel="stylesheet" href="t6.css">
 </head>
 <body>
-  <!-- ページ見出し -->
   <h1>お問い合わせフォーム</h1>
 
   <form action="https://webdesign.gr.jp/form.php" method="post">
-    <!-- 氏名（必須）：ユーザ入力用テキストボックス -->
     <label for="name">氏名<span class="required">※</span>:</label>
     <input type="text" id="name" name="name" required>
     
-    <!-- 電話番号（任意）：tel型の入力欄 -->
     <label for="tel">電話番号:</label>
     <input type="tel" id="tel" name="tel">
     
-    <!-- メールアドレス（必須）：email型の入力欄 -->
     <label for="email">メールアドレス<span class="required">※</span>:</label>
     <input type="email" id="email" name="email" required>
     
-    <!-- 都道府県（必須）：pref.txtに記載の都道府県リストをselect要素で表示 -->
     <label for="pref">都道府県<span class="required">※</span>:</label>
     <select id="pref" name="pref" required>
-      <!-- 初期表示用の選択肢 -->
       <option value="">選択してください</option>
-      <!-- 以下、pref.txtに記載されている都道府県のリスト -->
       <option value="北海道">北海道</option>
       <option value="青森県">青森県</option>
       <option value="岩手県">岩手県</option>
@@ -81,11 +71,9 @@
       <option value="沖縄県">沖縄県</option>
     </select>
     
-    <!-- 希望日時（必須）：日時入力用の入力欄（datetime-local型） -->
     <label for="date">希望日時<span class="required">※</span>:</label>
     <input type="datetime-local" id="date" name="date" required>
     
-    <!-- 備考（任意）：複数行入力用テキストエリア -->
     <label for="note">備考:</label>
     <textarea id="note" name="note"></textarea>
     
